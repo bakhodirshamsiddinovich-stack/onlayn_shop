@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fresh Fruits — Ta’mning oltin tanlovi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            🍍 FRESH FRUITS
+        </div>
+
+        <nav class="nav-links">
+            <a href="#home">Bosh sahifa</a>
+            <a href="#products">Mevalar</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+
+        <div class="navbar-right">
+            <div class="search-box">
+                <span>🔍</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Meva qidirish..."
+                    oninput="searchProducts()"
+                >
+            </div>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒 Savat
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main id="home">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-small-title">TABIIY • YANGI • MAZALI</p>
+
+                <h1>
+                    FRESH <span>FRUITS</span>
+                </h1>
+
+                <h2>Ta’mning oltin tanlovi.</h2>
+
+                <p>
+                    Eng saralangan va yangi mevalar endi sizning
+                    uyingizgacha yetkazib beriladi.
+                </p>
+
+                <button class="hero-button" onclick="scrollToProducts()">
+                    🍇 Mevalarni ko‘rish
+                </button>
+            </div>
+
+            <div class="hero-fruit">
+                <div class="fruit-glow"></div>
+                <div class="hero-fruit-icon">🍓</div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products">
+        <div class="section-heading">
+            <p class="section-small-title">SIZ UCHUN SARALANGAN</p>
+            <h2 class="section-title">Yangi mevalar</h2>
+            <p class="section-description">
+                Sifatli, foydali va mazali mevalarni qulay narxlarda tanlang.
+            </p>
+        </div>
+
+        <div class="products-container" id="productsContainer">
+
+            <!-- PRODUCT 1 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/ananas.png" alt="Ananas">
+                    <span class="product-badge">YANGI</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Ananas</h3>
+                    <p class="product-description">
+                        Shirin va xushbo‘y tropik meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            5 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Ananas', 5000, 'images/ananas.png')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/apelsin.png" alt="Apelsin">
+                    <span class="product-badge">TOP</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Apelsin</h3>
+                    <p class="product-description">
+                        Vitamin C ga boy, shirali meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            3 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Apelsin', 3000, 'images/apelsin.png')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/kivi.png" alt="Kivi">
+                </div>
+
+                <div class="product-info">
+                    <h3>Kivi</h3>
+                    <p class="product-description">
+                        Foydali va mazali yashil meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            3 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Kivi', 3000, 'images/kivi.png')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/malina.webp" alt="Malina">
+                    <span class="product-badge">YANGI</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Malina</h3>
+                    <p class="product-description">
+                        Mayin, shirin va xushbo‘y rezavor.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            5 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Malina', 5000, 'images/malina.webp')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/mandarin.avif" alt="Mandarin">
+                </div>
+
+                <div class="product-info">
+                    <h3>Mandarin</h3>
+                    <p class="product-description">
+                        Xushbo‘y va shirali sitrus meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            3 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Mandarin', 3000, 'images/mandarin.avif')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/olma.webp" alt="Olma">
+                    <span class="product-badge">TOP</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Olma</h3>
+                    <p class="product-description">
+                        Har kuni iste’mol qilish uchun foydali meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            2 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Olma', 2000, 'images/olma.webp')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 7 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/qulupnay.jpeg" alt="Qulupnay">
+                    <span class="product-badge">YANGI</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Qulupnay</h3>
+                    <p class="product-description">
+                        Yoqimli hidli va shirin rezavor meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            4 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Qulupnay', 4000, 'images/qulupnay.jpeg')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 8 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/tarvuz.jpg" alt="Tarvuz">
+                </div>
+
+                <div class="product-info">
+                    <h3>Tarvuz</h3>
+                    <p class="product-description">
+                        Yozning eng shirali va salqin mevasi.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            1 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Tarvuz', 1000, 'images/tarvuz.jpg')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 9 -->
+            <article class="product-card">
+                <div class="product-image-box">
+                    <img src="images/tut.webp" alt="Qora tut">
+                    <span class="product-badge">TOP</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Qora tut</h3>
+                    <p class="product-description">
+                        Tabiiy shirin va foydali rezavor meva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            2 000 <span>so‘m/kg</span>
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="addToCart('Qora tut', 2000, 'images/tut.webp')"
+                        >
+                            🛒
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+
+            <div class="about-icon">🍍</div>
+
+            <p class="section-small-title">BIZ HAQIMIZDA</p>
+
+            <h2>
+                Sifat va ta’m —
+                <span>bizning ustuvorligimiz</span>
+            </h2>
+
+            <p>
+                <strong>FRESH FRUITS</strong> — yangi, mazali va sifatli
+                mevalarni sizga qulay narxlarda taqdim etuvchi
+                zamonaviy onlayn meva do‘koni.
+            </p>
+
+            <p>
+                Bizning maqsadimiz — har bir xonadonga foydali,
+                tabiiy va saralangan mevalarni yetkazib berish.
+            </p>
+
+            <div class="owner-info">
+                <h3>👩‍💻 Loyiha muallifi</h3>
+
+                <p>
+                    <strong>Akramjanova Jadra Maratovna</strong>
+                </p>
+
+                <span>FRESH FRUITS asoschisi</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-content">
+
+            <p class="section-small-title">BIZ BILAN BOG‘LANING</p>
+
+            <h2>
+                Savollaringiz bormi?
+            </h2>
+
+            <p>
+                Buyurtma berish yoki qo‘shimcha ma’lumot olish uchun
+                biz bilan bog‘laning.
+            </p>
+
+            <div class="contact-items">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <div>
+                        <h3>Telefon</h3>
+                        <p>+998 90 000 00 00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>📍</span>
+                    <div>
+                        <h3>Manzil</h3>
+                        <p>O‘zbekiston</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>🕒</span>
+                    <div>
+                        <h3>Ish vaqti</h3>
+                        <p>Har kuni 09:00 — 22:00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CART PANEL -->
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h2>🛒 Savatingiz</h2>
+
+            <button class="close-cart" onclick="closeCart()">
+                ✕
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <div>🛒</div>
+                <p>Savat hozircha bo‘sh</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Jami:</span>
+                <strong id="cartTotal">0 so‘m</strong>
+            </div>
+
+            <button class="order-btn" onclick="orderProducts()">
+                📦 Buyurtma berish
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- OVERLAY -->
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+        onclick="closeCart()"
+    ></div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            🍍 FRESH FRUITS
+        </div>
+
+        <p>
+            Fresh Fruits — Ta’mning oltin tanlovi.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 FRESH FRUITS. Barcha huquqlar himoyalangan.
+        </p>
+
+        <p class="developer">
+            Loyiha muallifi:
+            <strong>Akramjanova Jadra Maratovna</strong>
+        </p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
